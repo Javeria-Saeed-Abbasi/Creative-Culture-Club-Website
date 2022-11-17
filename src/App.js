@@ -5,11 +5,13 @@ import Home from "./components/Home/home";
 import Navbar from "./components/Navbar/Navbar";
 import "swiper/css/bundle";
 import "video-react/dist/video-react.css"; // import css
+
 function App() {
   return (
     <div className="App">
       <>
       <Home />
+   
       </>
      
     </div>

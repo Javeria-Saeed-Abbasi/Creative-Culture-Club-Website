@@ -1,0 +1,76 @@
+.footer{
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height:450px;
+    top: 542px;
+    bottom: 0;
+}
+.footer .newsletter .text1{
+    /* background-color: aqua; */
+}
+.footer .newsletter .head1, .footer .contact-col .head1,
+.footer .menu .head1, .footer .what-we-do .head1 
+{
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 3;
+}
+.footer .newsletter .para1{
+    color: #BCBCBC;
+    line-height: 2;
+}
+.footer .newsletter .form-label{
+    color: #BCBCBC;
+}
+.footer .newsletter .form{
+    align-items: center; 
+    width: 100%;  
+}
+.footer .newsletter .form .form-control:focus{
+  outline: none;
+  box-shadow: none;
+}
+.footer .newsletter input[type=email]{
+    background-color: transparent;
+    border: 1px solid white;
+}
+.footer .newsletter .contact-btn{
+    background-color: rgb( 220,65,34);
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+.footer .contact-col .list-group .list-group-item,
+.footer .menu .list-group .list-group-item, .footer .what-we-do .list-group .list-group-item
+{
+    background-color: transparent!important;
+    padding: 0!important;
+}
+
+.footer .contact-col .list-group-item-action,.footer .menu .list-group-item-action,.footer .what-we-do .list-group-item-action{
+    color: #BCBCBC;
+    line-height: 2;
+    text-decoration: none;
+}
+.footer .contact-col .list-group-item.active , .footer .menu .list-group-item.active,
+.footer .what-we-do  .list-group-item.active
+ {
+    border: none;
+}
+.footer .contact-col .social-ul li img{
+    padding-right: 9px!important;
+}
+.footer hr{
+    color: white!important;
+    margin-top: 5rem!important;
+    margin-left:2rem!important;
+    margin-right:2rem!important;
+    width: 90%!important;
+    text-align: center!important;
+}
+.footer .copyright p{
+    color: #BCBCBC;
+}

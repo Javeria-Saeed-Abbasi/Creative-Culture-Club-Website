@@ -1,11 +1,24 @@
 import { Button } from "react-bootstrap";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "./NavbarStyle.css";
+
+// import { useScroll } from '@react-hooks-library/core';
 const Navbar1 = () => {
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar-fixed-top").style.top = "0";
+  } else {
+    document.getElementById("navbar-fixed-top").style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
   const [show, setShow] = useState(false);
   const showDropdown = (e) => {
     setShow(!show);
@@ -15,7 +28,7 @@ const Navbar1 = () => {
   };
   return (
     <Container>
-      <Navbar collapseOnSelect expand="lg" className="px-5 pt-0">
+      <Navbar collapseOnSelect expand="lg" className={"px-5 pt-0 Header"} id="navbar-fixed-top">
         <>
           <Navbar.Brand href="#home">
             <svg

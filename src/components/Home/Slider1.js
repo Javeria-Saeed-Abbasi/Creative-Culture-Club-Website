@@ -2,6 +2,14 @@ import React from "react";
 import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./styles.css";
+import { fadeIn, bounce, fadeInLeft, fadeInRight } from "react-animations";
+import styled, { keyframes } from "styled-components";
+const FadeIn = styled.div`
+  animation: 5s ${keyframes`${fadeIn}`};
+`;
+const FadeInLeft= styled.div`
+animation: 3s ${keyframes`${fadeInLeft}`};
+`;
 
 const Slider1 = () => {
   return (
@@ -21,9 +29,9 @@ const Slider1 = () => {
               <span className="head-1 text-start">OUR PRODUCTS</span>  
             </div>
             <div className="slide-text2 position-absolute">
-           <span className="para-3">
+          <FadeInLeft><span className="para-3">
                 From team building events to offsites and fun days, we got you covered with the right idea for your team
-           </span>
+           </span></FadeInLeft> 
             </div>
           
           </div>
@@ -34,9 +42,9 @@ const Slider1 = () => {
               <span className="head-1 text-start">OUR PRODUCTS</span>  
             </div>
             <div className="slide-text2 position-absolute">
-           <span className="para-3">
+            <FadeInLeft><span className="para-3">
                 From team building events to offsites and fun days, we got you covered with the right idea for your team
-           </span>
+           </span></FadeInLeft> 
             </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -45,9 +53,9 @@ const Slider1 = () => {
               <span className="head-1 text-start">OUR PRODUCTS</span>  
             </div>
             <div className="slide-text2 position-absolute">
-           <span className="para-3">
+            <FadeInLeft><span className="para-3">
                 From team building events to offsites and fun days, we got you covered with the right idea for your team
-           </span>
+           </span></FadeInLeft> 
             </div>
           </div>
         </SwiperSlide>
@@ -57,9 +65,9 @@ const Slider1 = () => {
               <span className="head-1 text-start">OUR PRODUCTS</span>  
             </div>
             <div className="slide-text2 position-absolute">
-           <span className="para-3">
+            <FadeInLeft><span className="para-3">
                 From team building events to offsites and fun days, we got you covered with the right idea for your team
-           </span>
+           </span></FadeInLeft> 
             </div>
           </div>
         </SwiperSlide>
@@ -69,9 +77,9 @@ const Slider1 = () => {
               <span className="head-1 text-start">OUR PRODUCTS</span>  
             </div>
             <div className="slide-text2 position-absolute">
-           <span className="para-3">
+            <FadeInLeft><span className="para-3">
                 From team building events to offsites and fun days, we got you covered with the right idea for your team
-           </span>
+           </span></FadeInLeft> 
             </div>
           </div>
         </SwiperSlide>
@@ -81,9 +89,9 @@ const Slider1 = () => {
               <span className="head-1 text-start">OUR PRODUCTS</span>  
             </div>
             <div className="slide-text2 position-absolute">
-           <span className="para-3">
+            <FadeInLeft><span className="para-3">
                 From team building events to offsites and fun days, we got you covered with the right idea for your team
-           </span>
+           </span></FadeInLeft> 
             </div>
           </div>
         </SwiperSlide>
