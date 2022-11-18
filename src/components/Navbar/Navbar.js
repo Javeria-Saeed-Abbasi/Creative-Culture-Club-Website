@@ -5,9 +5,20 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "./NavbarStyle.css";
+import WOW from 'wowjs';
 
 // import { useScroll } from '@react-hooks-library/core';
 const Navbar1 = () => {
+  
+ useEffect(() => {
+  new WOW.WOW({
+    boxClass:     'wow',      // default
+    animateClass: 'animated', // default
+    offset:       0,          // default
+    mobile:       true,       // default
+    live:         false
+}).init();
+ }, [])
   var prevScrollpos = window.pageYOffset;
   window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
@@ -28,7 +39,7 @@ const Navbar1 = () => {
   };
   return (
     <Container>
-      <Navbar collapseOnSelect expand="lg" className={"px-5 pt-0 Header"} id="navbar-fixed-top">
+      <Navbar collapseOnSelect expand="lg" className="px-5 pt-0 Header wow fadeIn center" data-wow-delay="1.3s" id="navbar-fixed-top">
         <>
           <Navbar.Brand href="#home">
             <svg

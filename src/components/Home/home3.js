@@ -35,21 +35,35 @@ import brand6 from "../assets/images/brands/intel.webp";
 import brand7 from "../assets/images/brands/ormat.webp";
 import brand8 from "../assets/images/brands/digital.webp";
 import Footer from "../Footer/Footer";
+import { fadeIn, bounce, fadeInLeft, fadeInRight } from "react-animations";
+import styled, { keyframes } from "styled-components";
 
-import WOW from 'wowjs';
 
+
+const FadeIn = styled.div`
+  animation: 4s ${keyframes`${fadeIn}`};
+`;
+const FadeInLeftList = styled.div`
+animation: 2s ${keyframes`${fadeInLeft}`};
+`;
+const FadeInLeftList2 = styled.div`
+animation: 3s ${keyframes`${fadeInLeft}`};
+`;
+const FadeInNav = styled.div`
+  animation: 2s ${keyframes`${fadeIn}`};
+`;
+const FadeInLeft = styled.div`
+  animation: 4s ${keyframes`${fadeInLeft}`};
+`;
+const FadeInRight = styled.div`
+  animation: 2s ${keyframes`${fadeInRight}`};
+`;
+const FadeInLeftBrand = styled.div`
+animation: 1s ${keyframes`${fadeInLeft}`};
+`;
 
 const Home = () => {
 
- useEffect(() => {
-  new WOW.WOW({
-    boxClass:     'wow',      // default
-    animateClass: 'animated', // default
-    offset:       0,          // default
-    mobile:       true,       // default
-    live:         false
-}).init();
- }, [])
  
   const card1Data = [
     {
@@ -87,18 +101,22 @@ const Home = () => {
           <div className="bgimg1">
             <div className="container">
             <div className="text-1">
-                <p className="para-1 wow fadeInLeft center" data-wow-delay="1.3s" data-wow-offset="10">
+              <FadeInLeft>
+                {" "}
+                <p className="para-1">
                   Makers of meaningful cultural experiences
                 </p>
-              
+              </FadeInLeft>
             </div>
             <div className="text-2">
-                <p className="para-2 wow fadeInLeft center" data-wow-delay="1.3s" data-wow-offset="10">
+              <FadeInLeft>
+                {" "}
+                <p className="para-2">
                   Creative Culture Club is a one stop boutique concept house. We
                   originate creative and engaging experiences, cut and measured
                   to your needs.
                 </p>
-              
+              </FadeInLeft>
             </div>
             </div>
            
@@ -106,30 +124,30 @@ const Home = () => {
         </section>
         <section>
           <div className="bg-blck">
-            <div className="container">
-            
-              <div className="side-img wow fadeIn center" data-wow-delay="1.3s" data-wow-offset="10">
-                <Image src={SideImg} alt="side-img" className="" />
+            <div className="">
+            <FadeInRight>
+              <div className="side-img">
+                <Image src={SideImg} alt="side-img" />
               </div>
-            
-            <div className="text3 wow fadeInLeft center" data-wow-delay="1s" data-wow-offset="10">
-              
+            </FadeInRight>
+            <div className="text3">
+              <FadeInLeft>
                 <h5>OUR PRODUCTS</h5>{" "}
-              
+              </FadeInLeft>
             </div>
             <div className="text4">
-              
-                <span className="h-1 wow fadeInLeft center" data-wow-delay="1.2s" data-wow-offset="10">
+              <FadeInLeft>
+                <span className="h-1">
                   We are a Tel-Aviv based elite team of professional and
                   creative experts
                 </span>
-              
+              </FadeInLeft>
             </div>
-            <div className="text-5 d-flex flex-direction-row justify-content-space-between align-content-center">
-              <>
-                <div className="col-5">
-                  
-                    <p className="para-1 wow fadeInLeft center" data-wow-delay="1.7s" data-wow-offset="10">
+            <div className="text-5">
+              <Row>
+                <Col lg={5}>
+                  <FadeInLeft>
+                    <p className="para-1">
                       Founded by creative and business experts with decades of
                       experience, Creative Culture Club helps companies and
                       brands to keep their teams curious and inspired. From
@@ -140,24 +158,24 @@ const Home = () => {
                       to the highest standard - whether it's online, on site, or
                       in an off-site event.
                     </p>
-                  
+                  </FadeInLeft>
 
                   <div className="read-morebtn">
-                  <Button className="my-4">Read More</Button> 
+                    <FadeIn> <Button className="my-4">Read More</Button> </FadeIn>
                   </div>
-                </div>
-                <div className="col-5">
-                  
-                    <p className="para-2 wow fadeInLeft center" data-wow-delay="1.8s" data-wow-offset="10">
+                </Col>
+                <Col lg={4}>
+                  <FadeInLeft>
+                    <p className="para-2">
                       Being a boutique creative concept house, we partner with
                       renowned artists, filmmakers, musicians, designers, DJs,
                       trendsetters, scholars, and future thinkers to produce an
                       array of cool content through experiences that are
                       tailored specifically for your business or team’s needs.
                     </p>
-                  
-                </div>
-              </>
+                  </FadeInLeft>
+                </Col>
+              </Row>
             </div>
 
 
@@ -170,21 +188,18 @@ const Home = () => {
           <div className="bgOrng py-5">
             <div className="cards py-5 container">
               <Row className="mx-auto pb-5">
-                <Col lg={6} className="wow fadeInLeft center" data-wow-delay="1.2s">
-                
-                  <Card1 {...card1Data[0]}/>
-                 
-               
+                <Col lg={6}>
+                <Card1 {...card1Data[0]} />
                 </Col>
-                <Col lg={6} className="wow fadeInLeft center" data-wow-delay="1.3s">
+                <Col lg={6}>
               <Card1 {...card1Data[1]} />
                 </Col>
               </Row>
               <Row className="mx-auto pb-5">
-                <Col lg={6} className="wow fadeInLeft center" data-wow-delay="1.4s">
+                <Col lg={6}>
                   <Card1 {...card1Data[2]} />
                 </Col>
-                <Col lg={6} className="wow fadeInLeft center" data-wow-delay="1.5s">
+                <Col lg={6}>
                   <Card1 {...card1Data[3]} />
                 </Col>
               </Row>
@@ -211,14 +226,14 @@ const Home = () => {
             ></video>
             <Container>
               <div className="videotext mx-auto">
-               <p className="position-absolute wow fadeIn center" data-wow-delay="1s" data-wow-offset="10">
+               <FadeIn><p className="position-absolute">
                   Elastic thinking is our thing
-                </p> 
+                </p></FadeIn> 
               </div>
               <div className="abilities position-absolute">
-              
+              <FadeInLeft>
                 <Row>
-                  <Col lg={4} className="wow fadeInLeft center" data-wow-delay="1s" data-wow-offset="10">
+                  <Col lg={4}>
                     <Card style={{ width: "23rem", textAlign: "center" }}>
                       <Card.Body className="py-4 px-5">
                         <svg
@@ -253,7 +268,7 @@ const Home = () => {
                       </Card.Body>
                     </Card>
                   </Col>
-                  <Col lg={4} className="wow fadeInLeft center" data-wow-delay="1.2s" data-wow-offset="10">
+                  <Col lg={4}>
                     <Card style={{ width: "23rem", textAlign: "center" }}>
                       <Card.Body className="py-4 px-5">
                         <svg
@@ -289,7 +304,7 @@ const Home = () => {
                       </Card.Body>
                     </Card>
                   </Col>
-                  <Col lg={4} className="wow fadeInLeft center" data-wow-delay="1.3s" data-wow-offset="10">
+                  <Col lg={4} className="">
                     <Card style={{ width: "23rem", textAlign: "center" }}>
                       <Card.Body className="py-4 px-5">
                         <svg
@@ -324,7 +339,7 @@ const Home = () => {
                     </Card>
                   </Col>
                 </Row>
-                
+                </FadeInLeft>
               </div>
             </Container>
           </div>
@@ -336,8 +351,8 @@ const Home = () => {
            
                 <Row>
                   <Col lg={6}>
-                  
-                    <ListGroup className="px-3 wow fadeInLeft center" data-wow-delay="1s" data-wow-offset="10">
+                  <FadeInLeftList>
+                    <ListGroup className="px-3">
                       <ListGroup.Item>
                         <span className="head4">EXPERIENCES PRODUCTION</span>
                       </ListGroup.Item>
@@ -367,11 +382,11 @@ const Home = () => {
                         Internal Campaign Materials
                       </ListGroup.Item>
                     </ListGroup>
-                    
+                    </FadeInLeftList>
                   </Col>
                   <Col lg={6}>
-                  
-                    <ListGroup className="px-3 wow fadeInLeft center" data-wow-delay="1.2s" data-wow-offset="10">
+                  <FadeInLeftList2>
+                    <ListGroup className="px-3">
                       <ListGroup.Item>
                         <span className="head4">CREATIVE CONSULTANCY</span>
                       </ListGroup.Item>
@@ -392,57 +407,57 @@ const Home = () => {
                         Content Writing
                       </ListGroup.Item>
                     </ListGroup>
-                   
+                    </FadeInLeftList2>
                   </Col>
                 </Row>
              
               </div>
-               <hr className="px-3 wow fadeInLeft center" data-wow-delay="0.5s" data-wow-offset="10"/> 
+              <FadeInLeft> <hr /> </FadeInLeft>
               <div className="brands">
                 <div className="d-flex justify-content-center pb-5">
-               <span className="head4 wow fadeIn center" data-wow-delay="0.5s" data-wow-offset="10">JOIN THE CLUB</span>
+                <FadeIn>  <span className="head4">JOIN THE CLUB</span></FadeIn>
                 </div>
                 <div className="d-flex">
-                
-                  <div className="brandImg mtop-0 wow fadeInLeft center" data-wow-delay="0.1s" data-wow-offset="10">
+                <FadeInLeftBrand>
+                  <div className="brandImg mtop-0">
                     <Image src={brand1} alt="" />
                   </div>
-                  
-                  <div className="brandImg  wow fadeInLeft center" data-wow-delay="0.2s" data-wow-offset="10">
+                  </FadeInLeftBrand>
+                  <div className="brandImg">
                     <Image src={brand2} alt="" />
                   </div>
-                  
-                  <div className="brandImg  wow fadeInLeft center" data-wow-delay="0.3s" data-wow-offset="10">
+                  <FadeInLeftBrand>
+                  <div className="brandImg">
                     <Image src={brand3} alt="" />
                   </div>
-                  
-                  <div className="brandImg  mtop-0  wow fadeInLeft center" data-wow-delay="0.4s" data-wow-offset="10">
+                  </FadeInLeftBrand>
+                  <FadeInLeftBrand><div className="brandImg  mtop-0">
                     <Image src={brand4} alt="" />
                   </div>
-                  
-                  <div className="brandImg  mtop-0  wow fadeInLeft center" data-wow-delay="0.5s" data-wow-offset="10">
+                  </FadeInLeftBrand>
+                  <FadeInLeftBrand><div className="brandImg  mtop-0">
                     <Image src={brand5} alt="" />
                   </div>
-                  
-                  <div className="brandImg mtop-0  wow fadeInLeft center" data-wow-delay="0.6s" data-wow-offset="10">
+                  </FadeInLeftBrand>
+                  <FadeInLeftBrand><div className="brandImg mtop-0">
                     <Image src={brand6} alt="" />
                   </div>
-                  
-                  <div className="brandImg mtop-0  wow fadeInLeft center" data-wow-delay="0.7s" data-wow-offset="10">
+                  </FadeInLeftBrand>
+                  <FadeInLeftBrand><div className="brandImg mtop-0">
                     <Image src={brand7} alt="" />
                   </div>
-                  
-                  <div className="brandImg  mtop-0  wow fadeInLeft center" data-wow-delay="0.8s" data-wow-offset="10">
+                  </FadeInLeftBrand>
+                  <FadeInLeftBrand><div className="brandImg  mtop-0">
                     <Image src={brand8} alt="" />
                   </div>
-                  
+                  </FadeInLeftBrand>
                 </div>
               </div>
-               <hr className="px-3 wow fadeInLeft center" data-wow-delay="0.5s" data-wow-offset="10" />
-              
-              <div className="cntc-block wow fadeIn center" data-wow-delay="0.1s" data-wow-offset="">
-                <div className="block-text wow fadeIn center" data-wow-delay="1s" data-wow-offset="10">
-                
+              <FadeInLeft> <hr /></FadeInLeft>
+              <FadeInRight>
+              <div className="cntc-block">
+                <div className="block-text">
+                <FadeInLeft>
                   <span className="head2">
                     <svg
                       stroke="currentColor"
@@ -457,7 +472,7 @@ const Home = () => {
                     </svg>
                     Let's create cool stuff together
                   </span>
-                  
+                  </FadeInLeft>
                   <div className="contact-btn d-flex mt-2">
                     <Button href="#" variant="" size="lg">
                       CONTACT US
@@ -465,7 +480,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              
+              </FadeInRight>
             </div>
           </div>
         </section>

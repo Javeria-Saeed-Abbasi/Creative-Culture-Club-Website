@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./styles.css";
-import { fadeIn, bounce, fadeInLeft, fadeInRight } from "react-animations";
-import styled, { keyframes } from "styled-components";
-const FadeIn = styled.div`
-  animation: 5s ${keyframes`${fadeIn}`};
-`;
-const FadeInLeft= styled.div`
-animation: 3s ${keyframes`${fadeInLeft}`};
-`;
+import WOW from "wowjs";
 
 const Slider1 = () => {
+  
+ useEffect(() => {
+  new WOW.WOW({
+    boxClass:     'wow',      // default
+    animateClass: 'animated', // default
+    offset:       0,          // default
+    mobile:       true,       // default
+    live:         false
+}).init();
+ }, [])
   return (
     <div className="swiper1">
       <Swiper
@@ -29,9 +32,9 @@ const Slider1 = () => {
               <span className="head-1 text-start">OUR PRODUCTS</span>  
             </div>
             <div className="slide-text2 position-absolute">
-          <FadeInLeft><span className="para-3">
+          <span className="para-3 wow fadeIn center" data-wow-delay="0.5s" data-wow-offset="10">
                 From team building events to offsites and fun days, we got you covered with the right idea for your team
-           </span></FadeInLeft> 
+           </span>
             </div>
           
           </div>
@@ -42,9 +45,9 @@ const Slider1 = () => {
               <span className="head-1 text-start">OUR PRODUCTS</span>  
             </div>
             <div className="slide-text2 position-absolute">
-            <FadeInLeft><span className="para-3">
+           <span className="para-3 wow fadeIn center" data-wow-delay="0.8s" data-wow-offset="10">
                 From team building events to offsites and fun days, we got you covered with the right idea for your team
-           </span></FadeInLeft> 
+           </span>
             </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -53,9 +56,9 @@ const Slider1 = () => {
               <span className="head-1 text-start">OUR PRODUCTS</span>  
             </div>
             <div className="slide-text2 position-absolute">
-            <FadeInLeft><span className="para-3">
+           <span className="para-3 wow fadeIn center" data-wow-delay="1s" data-wow-offset="10">
                 From team building events to offsites and fun days, we got you covered with the right idea for your team
-           </span></FadeInLeft> 
+           </span>
             </div>
           </div>
         </SwiperSlide>
@@ -65,9 +68,9 @@ const Slider1 = () => {
               <span className="head-1 text-start">OUR PRODUCTS</span>  
             </div>
             <div className="slide-text2 position-absolute">
-            <FadeInLeft><span className="para-3">
+           <span className="para-3 wow fadeIn center" data-wow-delay="1.3s" data-wow-offset="10">
                 From team building events to offsites and fun days, we got you covered with the right idea for your team
-           </span></FadeInLeft> 
+           </span>
             </div>
           </div>
         </SwiperSlide>
@@ -77,9 +80,9 @@ const Slider1 = () => {
               <span className="head-1 text-start">OUR PRODUCTS</span>  
             </div>
             <div className="slide-text2 position-absolute">
-            <FadeInLeft><span className="para-3">
+           <span className="para-3 wow fadeIn center" data-wow-delay="1.5s" data-wow-offset="10">
                 From team building events to offsites and fun days, we got you covered with the right idea for your team
-           </span></FadeInLeft> 
+           </span>
             </div>
           </div>
         </SwiperSlide>
@@ -89,9 +92,9 @@ const Slider1 = () => {
               <span className="head-1 text-start">OUR PRODUCTS</span>  
             </div>
             <div className="slide-text2 position-absolute">
-            <FadeInLeft><span className="para-3">
+           <span className="para-3 wow fadeIn center" data-wow-delay="1.7s" data-wow-offset="10">
                 From team building events to offsites and fun days, we got you covered with the right idea for your team
-           </span></FadeInLeft> 
+           </span>
             </div>
           </div>
         </SwiperSlide>

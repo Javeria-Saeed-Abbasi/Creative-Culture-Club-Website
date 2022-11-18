@@ -105,8 +105,8 @@ body {
 }
 .slide-text{
     top: 50%;
-    left: 10%;
-    transform: translate(-50%, -50%);
+    left: 2%;
+    /* transform: translate(-50%, -50%); */
     z-index: 11;
 
 }
@@ -122,16 +122,25 @@ body {
   
 }
 .slide-text2{
-    top: 75%;
-    left: 34.5%;
-    width: 60%;
-    transform: translate(-52%, -50%);
+    top: 55%;
+    left: 1.5%;
+    width: 80%;
+    /* transform: translate(-52%, -50%); */
     text-align: left;
     z-index: 11;
 }
 .slide-text2 .para-3{
     color: #fff;
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 3.5rem;
     text-align: left;
+}
+@media (max-width: 414px){
+    .slide-text2 .para-3
+    {
+      font-size: 1rem;
+    }
+    .slide-text {
+        left: 24%;
+    }
 }

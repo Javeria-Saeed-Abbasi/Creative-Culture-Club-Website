@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Button,
   Col,
@@ -13,39 +13,27 @@ import twitter from "../assets/images/social-icons/twitter.png";
 import spotify from "../assets/images/social-icons/spotify.png";
 import linkedin from "../assets/images/social-icons/linkedin.png";
 import insta from "../assets/images/social-icons/insta.png";
-import { fadeIn, bounce, fadeInLeft, fadeInRight } from "react-animations";
-import styled, { keyframes } from "styled-components";
-const FadeIn = styled.div`
-  animation: 5s ${keyframes`${fadeIn}`};
-`;
-const FadeInLeftList = styled.div`
-animation: 2s ${keyframes`${fadeInLeft}`};
-`;
-const FadeInLeftList2 = styled.div`
-animation: 3s ${keyframes`${fadeInLeft}`};
-`;
-const FadeInNav = styled.div`
-  animation: 2s ${keyframes`${fadeIn}`};
-`;
-const FadeInLeft = styled.div`
-  animation: 4s ${keyframes`${fadeInLeft}`};
-`;
-const FadeInRight = styled.div`
-  animation: 2s ${keyframes`${fadeInRight}`};
-`;
-const FadeInLeftBrand = styled.div`
-animation: 1s ${keyframes`${fadeInLeft}`};
-`;
-const footer = () => {
+import WOW from 'wowjs';
+const Footer = () => {
+
+  useEffect(() => {
+    new WOW.WOW({
+      boxClass:     'wow',      // default
+      animateClass: 'animated', // default
+      offset:       0,          // default
+      mobile:       true,       // default
+      live:         false
+  }).init();
+   }, [])
   return (
     <div>
       <section>
         <div className="footer py-5">
           <div className="container">
-            <FadeIn>
+         
             <Row className="px-4">
               <Col lg={4}>
-                <div className="newsletter">
+                <div className="newsletter wow fadeInLeft center" data-wow-delay="0.2s" data-wow-offset="10">
                   <div className="text1">
                     <span className="head1 pb-3">
                       NOT YOUR REGULAR NEWSLETTER
@@ -79,7 +67,7 @@ const footer = () => {
                 </div>
               </Col>
               <Col lg={3}>
-                <div className="contact-col mx-auto">
+                <div className="contact-col mx-auto  wow fadeInLeft center" data-wow-delay="0.4s" data-wow-offset="10">
                   <ListGroup className="px-3">
                     <ListGroup.Item>
                       <span className="head1">CONTACT</span>
@@ -118,7 +106,7 @@ const footer = () => {
                 </div>
               </Col>
               <Col lg={2}>
-                <div className="menu mx-auto">
+                <div className="menu mx-auto  wow fadeInLeft center" data-wow-delay="0.6s" data-wow-offset="10">
                   <ListGroup className="px-3">
                     <ListGroup.Item>
                       <span className="head1">MENU</span>
@@ -140,7 +128,7 @@ const footer = () => {
                 </div>
               </Col>
               <Col lg={3}>
-                <div className="menu what-we-do mx-auto">
+                <div className="menu what-we-do mx-auto wow fadeInLeft center" data-wow-delay="0.8s" data-wow-offset="10">
                   <ListGroup className="px-3">
                     <ListGroup.Item>
                       <span className="head1">WHAT WE DO</span>
@@ -162,12 +150,12 @@ const footer = () => {
                 </div>
               </Col>
             </Row>
-            </FadeIn>
+        
          
            
-              <FadeInLeft>
-              <hr/>
-              </FadeInLeft>
+        
+              <hr className="wow fadeInLeft center" data-wow-delay="0.5s" data-wow-offset="10"/>
+   
            
             <div className="copyright px-4">
                 <p>
@@ -181,4 +169,4 @@ const footer = () => {
   );
 };
 
-export default footer;
+export default Footer;
