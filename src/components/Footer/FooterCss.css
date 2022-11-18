@@ -74,3 +74,9 @@
 .footer .copyright p{
     color: #BCBCBC;
 }
+@media (max-width:414px) {
+    .footer {
+        height: 1074px;
+        top: 1331px;
+    }
+}

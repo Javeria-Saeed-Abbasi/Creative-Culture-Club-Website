@@ -21,10 +21,10 @@
 .navbar{
     --bs-navbar-nav-link-padding-x:1.5rem;
 }
-.navbar-nav {
+/* .navbar-nav {
     padding-right: 1.5rem!important;
     padding-left: 17.5rem!important;
-}
+} */
 .dropdown-toggle::after{
     content: unset;
 }
@@ -55,4 +55,20 @@
     color: #000;
     border: 1px solid transparent;
     font-size: 1rem!important;
+}
+@media (max-width:414px) {
+    .navbar{
+        width: 40%;
+        left: -20px;
+        right: -20px;
+    }
+    .navbar-nav {
+        background-color: #0000006b;
+        padding-left: 1rem!important;
+        width: 90%;
+    }
+    .offcanvas-backdrop {
+        background-color: rgb(220,65,34);
+    }
+    
 }

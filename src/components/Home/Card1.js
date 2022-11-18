@@ -21,7 +21,7 @@ const Card1 = ({img, title, para}) => {
             <br/>
             <br/>
        
-            <p className="wow fadeIn center" data-wow-delay="0.5s" data-wow-offset="10">
+            <p>
               {para}
             </p>
             

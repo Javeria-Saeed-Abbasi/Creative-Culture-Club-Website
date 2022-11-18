@@ -136,11 +136,15 @@ body {
     text-align: left;
 }
 @media (max-width: 414px){
+    .slide-text2{
+        width: 70%;
+      }
     .slide-text2 .para-3
     {
       font-size: 1rem;
     }
     .slide-text {
-        left: 24%;
+        left: 1%;
     }
+ 
 }

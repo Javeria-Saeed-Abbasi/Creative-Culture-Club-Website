@@ -108,18 +108,18 @@ const Home = () => {
           <div className="bg-blck">
             <div className="container">
             
-              <div className="side-img wow fadeIn center" data-wow-delay="1.3s" data-wow-offset="10">
+              <div className="side-img wow fadeIn center" data-wow-delay="0.7s" data-wow-offset="10">
                 <Image src={SideImg} alt="side-img" className="" />
               </div>
             
-            <div className="text3 wow fadeInLeft center" data-wow-delay="1s" data-wow-offset="10">
+            <div className="text3 wow fadeInLeft center" data-wow-delay="0.5s" data-wow-offset="10">
               
                 <h5>OUR PRODUCTS</h5>{" "}
               
             </div>
             <div className="text4">
               
-                <span className="h-1 wow fadeInLeft center" data-wow-delay="1.2s" data-wow-offset="10">
+                <span className="h-1 wow fadeInLeft center" data-wow-delay="0.6s" data-wow-offset="10">
                   We are a Tel-Aviv based elite team of professional and
                   creative experts
                 </span>
@@ -127,9 +127,9 @@ const Home = () => {
             </div>
             <div className="text-5 d-flex flex-direction-row justify-content-space-between align-content-center">
               <>
-                <div className="col-5">
+                <div className="col-lg-5 col-sm-12">
                   
-                    <p className="para-1 wow fadeInLeft center" data-wow-delay="1.7s" data-wow-offset="10">
+                    <p className="para-1 wow fadeInLeft center" data-wow-delay="0.7s" data-wow-offset="10">
                       Founded by creative and business experts with decades of
                       experience, Creative Culture Club helps companies and
                       brands to keep their teams curious and inspired. From
@@ -146,9 +146,9 @@ const Home = () => {
                   <Button className="my-4">Read More</Button> 
                   </div>
                 </div>
-                <div className="col-5">
+                <div className="col-lg-5 col-sm-12">
                   
-                    <p className="para-2 wow fadeInLeft center" data-wow-delay="1.8s" data-wow-offset="10">
+                    <p className="para-2 wow fadeInLeft center" data-wow-delay="0.8s" data-wow-offset="10">
                       Being a boutique creative concept house, we partner with
                       renowned artists, filmmakers, musicians, designers, DJs,
                       trendsetters, scholars, and future thinkers to produce an
@@ -218,8 +218,8 @@ const Home = () => {
               <div className="abilities position-absolute">
               
                 <Row>
-                  <Col lg={4} className="wow fadeInLeft center" data-wow-delay="1s" data-wow-offset="10">
-                    <Card style={{ width: "23rem", textAlign: "center" }}>
+                  <Col lg={4} className="wow fadeIn center" data-wow-delay="0.5s" data-wow-offset="10">
+                    <Card style={{ width: "23rem", textAlign: "center", marginBottom:"3rem" }}>
                       <Card.Body className="py-4 px-5">
                         <svg
                           preserveAspectRatio="xMidYMid meet"
@@ -253,8 +253,8 @@ const Home = () => {
                       </Card.Body>
                     </Card>
                   </Col>
-                  <Col lg={4} className="wow fadeInLeft center" data-wow-delay="1.2s" data-wow-offset="10">
-                    <Card style={{ width: "23rem", textAlign: "center" }}>
+                  <Col lg={4} className="wow fadeInLeft center" data-wow-delay="0.6s" data-wow-offset="10">
+                    <Card style={{ width: "23rem", textAlign: "center", marginBottom:"3rem"  }}>
                       <Card.Body className="py-4 px-5">
                         <svg
                           preserveAspectRatio="xMidYMid meet"
@@ -289,8 +289,8 @@ const Home = () => {
                       </Card.Body>
                     </Card>
                   </Col>
-                  <Col lg={4} className="wow fadeInLeft center" data-wow-delay="1.3s" data-wow-offset="10">
-                    <Card style={{ width: "23rem", textAlign: "center" }}>
+                  <Col lg={4} className="wow fadeInLeft center" data-wow-delay="0.7s" data-wow-offset="10">
+                    <Card style={{ width: "23rem", textAlign: "center", marginBottom:"3rem"  }}>
                       <Card.Body className="py-4 px-5">
                         <svg
                           preserveAspectRatio="xMidYMid meet"
